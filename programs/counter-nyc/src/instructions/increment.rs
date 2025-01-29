@@ -18,6 +18,8 @@ impl<'info> Increment<'info> {
     pub fn increment(&mut self) -> Result<()> {
         self.counter.count = self.counter.count.saturating_add(1);
 
+        msg!("Counter Incremented to {}", self.counter.count);
+
         Ok(())
     }
 }

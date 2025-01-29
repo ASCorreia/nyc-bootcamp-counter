@@ -21,6 +21,8 @@ impl<'info> Initialize<'info> {
     pub fn initialize(&mut self, bumps: &InitializeBumps) -> Result<()> {
         self.counter.count = 0;
         self.counter.bump = bumps.counter;
+
+        msg!("Counter Account Initialized");
         
         Ok(())
     }
